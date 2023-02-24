@@ -1,8 +1,10 @@
 from mysql.connector import connect, Error
 from colr import color
 import fire
+from db_decorator.db_information import db_information
 
 
+@db_information
 def search_int():
     try:
         busca = input(color(" What is the id? ", fore="#fe7243"))

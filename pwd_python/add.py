@@ -4,8 +4,10 @@ from mysql.connector import connect, Error
 from colr import color
 import fire
 from tabulate import tabulate
+from db_decorator.db_information import db_information
 
 
+@db_information
 def add():
     """Here we'll be doing two things. Which means that what I have here in reality are two functions. But I just can't be bothered. Here we'll
     promt the user for the data for a new entry. After that we'll check if there is already a site with the same name in the db. If true,

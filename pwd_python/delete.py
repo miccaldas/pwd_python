@@ -3,8 +3,10 @@ import sys
 import traceback
 from mysql.connector import connect, Error
 from colr import color
+from db_decorator.db_information import db_information
 
 
+@db_information
 def delete():
     ident = input(color(' ID to delete? » ', fore='#fe7243'))
 

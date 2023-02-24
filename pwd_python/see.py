@@ -4,8 +4,10 @@ import traceback
 from mysql.connector import connect, Error
 from colr import color
 import fire
+from db_decorator.db_information import db_information
 
 
+@db_information
 def see():
     try:
         conn = connect(

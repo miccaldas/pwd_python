@@ -4,8 +4,10 @@ from mysql.connector import connect, Error
 from colr import color
 from tabulate import tabulate
 import fire
+from db_decorator.db_information import db_information
 
 
+@db_information
 def search():
     try:
         busca = input(color(" What are you searching for? ", fore="#fe7243"))
